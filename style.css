@@ -268,3 +268,74 @@ footer {
         display: block;
     }
 }
+
+/* ========================================================== */
+/* ============   這是新加入的留言表單樣式   ============ */
+/* ========================================================== */
+
+#contact {
+    /* 我們在 #contact 裡面加入了表單，所以讓它的背景色跟上下區塊一致 */
+    background: var(--light-color);
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto; /* 讓表單在頁面中置中 */
+    margin-top: 4rem; /* 在表單和上方的社群圖示之間增加一些間距 */
+    padding: 2rem;
+    background: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left; /* 讓表單內的文字靠左對齊 */
+}
+
+.form-container h3 {
+    text-align: center; /* 讓「或在此直接留言」這個小標題置中 */
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: var(--dark-color);
+}
+
+.form-container p {
+    margin-bottom: 1rem;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.form-container button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+    background: #2980b9;
+}
+
+/* --- 這段是之前調整自我介紹文字大小的，如果還沒加，可以一起加上 --- */
+.about-container p {
+    font-size: 18px; 
+    line-height: 1.8;
+}
