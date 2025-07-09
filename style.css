@@ -59,7 +59,7 @@ nav {
     padding: 1rem 2rem;
 }
 
-/* ========= 新增：導覽列突出按鈕的樣式 ========= */
+/* ========= 導覽列突出按鈕的樣式 ========= */
 .cta-nav-button {
     padding: 8px 20px;
     background-color: #34495e;
@@ -70,6 +70,7 @@ nav {
     border: 1px solid #2c3e50;
     box-shadow: 0 4px #2c3e50;
     transition: all 0.2s ease-in-out;
+    display: inline-block; /* 確保樣式正確顯示 */
 }
 
 .cta-nav-button:hover {
@@ -90,6 +91,7 @@ nav {
 
 .nav-links {
     display: flex;
+    align-items: center; /* 讓按鈕和連結垂直置中對齊 */
     list-style: none;
 }
 
@@ -276,10 +278,9 @@ footer {
         overflow-x: hidden;
     }
 
-    /* 在手機版隱藏這個突出的按鈕，保持介面乾淨 */
-    .cta-nav-button {
-        display: none;
-    }
+    /* ▼▼▼ 修改處 ▼▼▼ */
+    /* 移除原本隱藏按鈕的 display:none; 規則 */
+    /* ▲▲▲ 修改處 ▲▲▲ */
 
     .nav-links {
         position: fixed;
@@ -294,7 +295,13 @@ footer {
         width: 60%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        /* 因為按鈕也變成 li, 所以移除 li 的 padding, 在手機版由 space-around 控制間距 */
+        padding: 0;
     }
+    .nav-links li {
+        padding: 0; /* 在手機版移除 li 的 padding */
+    }
+
     .nav-links.nav-active {
         transform: translateX(0%);
     }
@@ -304,6 +311,32 @@ footer {
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
+
+    /* ▼▼▼ 新增處 ▼▼▼ */
+    /* 新增手機版漢堡選單中，"過勞儀表板" 按鈕的專屬樣式 */
+    .nav-links .cta-nav-button {
+        /* 重設桌面版的樣式 */
+        background: none;
+        box-shadow: none;
+        
+        /* 設定手機版專屬的突出樣式 */
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+        border-radius: 30px;
+        padding: 10px 20px; /* 微調 padding */
+    }
+
+    .nav-links .cta-nav-button:hover {
+        background-color: var(--primary-color);
+        color: var(--white-color);
+    }
+    
+    .nav-links .cta-nav-button:active {
+        /* 移除桌面版的點擊下沉效果 */
+        transform: none;
+        box-shadow: none;
+    }
+    /* ▲▲▲ 新增處 ▲▲▲ */
 }
 
 /* --- 留言表單樣式 --- */
