@@ -59,6 +59,29 @@ nav {
     padding: 1rem 2rem;
 }
 
+/* ========= 新增：導覽列突出按鈕的樣式 ========= */
+.cta-nav-button {
+    padding: 8px 20px;
+    background-color: #34495e;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 1px solid #2c3e50;
+    box-shadow: 0 4px #2c3e50;
+    transition: all 0.2s ease-in-out;
+}
+
+.cta-nav-button:hover {
+    background-color: #4a6572;
+}
+
+.cta-nav-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px #2c3e50;
+}
+/* =============================================== */
+
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -141,6 +164,10 @@ main {
     border: 5px solid var(--primary-color);
     margin-bottom: 1.5rem;
 }
+.about-container p {
+    font-size: 18px; 
+    line-height: 1.8;
+}
 
 /* --- 技能 --- */
 .skills-grid {
@@ -170,21 +197,13 @@ main {
 #portfolio {
     background: var(--light-color);
 }
-
-/*
- * ==========================================================
- * =====================  這裡是主要的修改  =====================
- * ==========================================================
- */
 .portfolio-grid {
     display: grid;
-    /* 在大於 768px 的螢幕上，固定顯示兩欄 */
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    max-width: 900px; /* 稍微縮小最大寬度，讓版面更緊湊 */
+    max-width: 900px;
     margin: 0 auto;
 }
-
 .portfolio-item {
     background: var(--white-color);
     border-radius: 10px;
@@ -215,6 +234,7 @@ main {
 /* --- 聯絡我 --- */
 #contact {
     text-align: center;
+    background: var(--light-color);
 }
 .social-links {
     margin-top: 2rem;
@@ -256,6 +276,11 @@ footer {
         overflow-x: hidden;
     }
 
+    /* 在手機版隱藏這個突出的按鈕，保持介面乾淨 */
+    .cta-nav-button {
+        display: none;
+    }
+
     .nav-links {
         position: fixed;
         right: 0px;
@@ -270,47 +295,31 @@ footer {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
-
     .nav-links.nav-active {
         transform: translateX(0%);
     }
-
     .burger {
         display: block;
     }
-
-    /* 
-     * ==========================================================
-     * ===========  這裡是手機版的對應修改，也已包含  ============
-     * ==========================================================
-     */
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
 }
 
-/* ========================================================== */
-/* ============   這是留言表單樣式，保持不變   ============ */
-/* ========================================================== */
-
-#contact {
-    /* 我們在 #contact 裡面加入了表單，所以讓它的背景色跟上下區塊一致 */
-    background: var(--light-color);
-}
-
+/* --- 留言表單樣式 --- */
 .form-container {
     max-width: 700px;
-    margin: 0 auto; /* 讓表單在頁面中置中 */
-    margin-top: 4rem; /* 在表單和上方的社群圖示之間增加一些間距 */
+    margin: 0 auto;
+    margin-top: 4rem;
     padding: 2rem;
     background: var(--white-color);
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    text-align: left; /* 讓表單內的文字靠左對齊 */
+    text-align: left;
 }
 
 .form-container h3 {
-    text-align: center; /* 讓「或在此直接留言」這個小標題置中 */
+    text-align: center;
     margin-bottom: 2rem;
     font-size: 1.8rem;
     color: var(--dark-color);
@@ -352,10 +361,4 @@ footer {
 
 .form-container button:hover {
     background: #2980b9;
-}
-
-/* --- 這段是之前調整自我介紹文字大小的，如果還沒加，可以一起加上 --- */
-.about-container p {
-    font-size: 18px; 
-    line-height: 1.8;
 }
