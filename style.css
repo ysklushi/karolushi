@@ -63,24 +63,25 @@ nav {
 /* ========= 導覽列突出按鈕的樣式 (顏色修改) ========= */
 .cta-nav-button {
     padding: 8px 20px;
-    background-color: var(--light-blue-color); /* <<< 修改：改用淡藍色背景 */
-    color: var(--dark-color);                   /* <<< 修改：改用深灰色文字 */
+    background-color: var(--light-blue-color); 
+    color: var(--dark-color);                   
     text-decoration: none;
     font-weight: bold;
     border-radius: 8px;
-    border: 1px solid #d0e0f0;                  /* <<< 修改：加上一個匹配的淡色邊框 */
-    box-shadow: none;                           /* <<< 修改：移除預設陰影 */
+    border: 1px solid #d0e0f0;                  
+    box-shadow: none;                           
     transition: all 0.2s ease-in-out;
     display: inline-block;
 }
 
+/* ▼▼▼ 主要修改處 ▼▼▼ */
+/* 修改 hover 效果，移除顏色變化，只保留浮動與陰影效果 */
 .cta-nav-button:hover {
-    background-color: var(--primary-color);     /* <<< 修改：懸停時變回主要藍色 */
-    color: var(--white-color);                  /* <<< 修改：懸停時變回白色文字 */
-    border-color: var(--primary-color);         /* <<< 修改：邊框顏色同步改變 */
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3); /* <<< 修改：加上柔和的陰影 */
+    transform: translateY(-3px); /* 讓按鈕向上浮動一點點 */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* 加上更明顯的陰影，增強立體感 */
+    /* 已將 background-color, color, border-color 的改變移除 */
 }
+/* ▲▲▲ 主要修改處 ▲▲▲ */
 
 .cta-nav-button:active {
     transform: translateY(1px);
@@ -326,7 +327,8 @@ footer {
     .nav-links .cta-nav-button:hover {
         background-color: var(--primary-color);
         color: var(--white-color);
-        transform: none;
+        transform: none; /* 手機版不需要浮動效果 */
+        box-shadow: none; /* 同上 */
     }
     
     .nav-links .cta-nav-button:active {
