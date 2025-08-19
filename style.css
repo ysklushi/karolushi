@@ -393,3 +393,23 @@ footer {
 .form-container button:hover {
     background: #2980b9;
 }
+
+/* ▼▼▼ 新增證書字號樣式 (已修改) ▼▼▼ */
+.certificate-info {
+    font-size: 1rem; /* 設定合適的字體大小 */
+    margin: 0 0 1.5rem 0; /* 與下方的段落產生間距 */
+    padding: 0;
+    color: #555; /* 使用較柔和的顏色 */
+}
+
+.certificate-info a {
+    color: inherit; /* 繼承父層的顏色 */
+    text-decoration: none; /* 移除底線 */
+    transition: color 0.3s ease, transform 0.3s ease; /* 加入 transform 的過渡效果 */
+}
+
+.certificate-info a:hover {
+    color: var(--primary-color); /* 滑鼠懸停時變為主題色 */
+    transform: translateY(-2px); /* 讓文字向上浮動 2px */
+}
+/* ▲▲▲ 新增證書字號樣式 (已修改) ▲▲▲ */
