@@ -6,6 +6,33 @@
     <title>楊時綱律師 - 個人網站</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ▼▼▼ 新增的 CSS 樣式 ▼▼▼ -->
+    <style>
+        /* 為三個特殊按鈕設定不同的背景顏色 */
+        .cta-nav-button.cta-shura {
+            background-color: #ffddc1; /* 淡橘色 */
+        }
+        .cta-nav-button.cta-test {
+            background-color: #c8e6c9; /* 淡綠色 */
+        }
+        .cta-nav-button.cta-dashboard {
+            background-color: #bbdefb; /* 淡藍色 (維持) */
+        }
+
+        /* 為按鈕增加滑鼠懸停效果，讓顏色稍微加深 */
+        .cta-nav-button.cta-shura:hover {
+            background-color: #ffcba4;
+        }
+        .cta-nav-button.cta-test:hover {
+            background-color: #a5d6a7;
+        }
+        .cta-nav-button.cta-dashboard:hover {
+            background-color: #90caf9;
+        }
+    </style>
+    <!-- ▲▲▲ 新增的 CSS 樣式 ▲▲▲ -->
+
 </head>
 <body>
 
@@ -15,12 +42,15 @@
 
             <!-- ▼▼▼ 修改處 ▼▼▼ -->
             <ul class="nav-links">
-                <!-- 新增 "勞基法試煉" 按鈕 -->
+                <!-- 新增 "最高修羅場" 按鈕 -->
                 <li>
-                    <a href="https://testforever.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button">勞基法試煉</a>
+                    <a href="https://shuratrial.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-shura">最高修羅場</a>
                 </li>
                 <li>
-                    <a href="https://karoboard.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-nav-button">過勞儀表板</a>
+                    <a href="https://testforever.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-test">勞基法試煉</a>
+                </li>
+                <li>
+                    <a href="https://karoboard.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-dashboard">過勞儀表板</a>
                 </li>
                 <li><a href="#about">關於我</a></li>
                 <li><a href="#skills">提供服務</a></li>
