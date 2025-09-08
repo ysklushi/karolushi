@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- ▼▼▼ 新增的 CSS 樣式 ▼▼▼ -->
+    <!-- ▼▼▼ 修改後的 CSS 樣式 (方案一) ▼▼▼ -->
     <style>
         /* 為三個特殊按鈕設定不同的背景顏色 */
         .cta-nav-button.cta-shura {
@@ -17,10 +17,22 @@
             background-color: #c8e6c9; /* 淡綠色 */
         }
         .cta-nav-button.cta-dashboard {
-            background-color: #bbdefb; /* 淡藍色 (維持) */
+            background-color: #bbdefb; /* 淡藍色 */
         }
 
-        /* 為按鈕增加滑鼠懸停效果，讓顏色稍微加深 */
+        /* 針對所有按鈕設定一個平滑的過渡效果 */
+        .cta-nav-button {
+            transition: all 0.2s ease-in-out;
+        }
+
+        /* 滑鼠懸停時的效果：背景加深 + 上浮 + 陰影 */
+        .cta-nav-button:hover {
+            color: #333 !important; /* 強制讓文字顏色不變，保持深色以利閱讀 */
+            transform: translateY(-2px); /* 讓按鈕向上移動 2px */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 加上柔和的陰影 */
+        }
+
+        /* 讓每個按鈕懸停時的背景色加深 */
         .cta-nav-button.cta-shura:hover {
             background-color: #ffcba4;
         }
@@ -31,7 +43,7 @@
             background-color: #90caf9;
         }
     </style>
-    <!-- ▲▲▲ 新增的 CSS 樣式 ▲▲▲ -->
+    <!-- ▲▲▲ 修改後的 CSS 樣式 ▲▲▲ -->
 
 </head>
 <body>
@@ -40,9 +52,7 @@
         <nav>
             <div class="logo">楊時綱律師</div>
 
-            <!-- ▼▼▼ 修改處 ▼▼▼ -->
             <ul class="nav-links">
-                <!-- 新增 "最高修羅場" 按鈕 -->
                 <li>
                     <a href="https://shuratrial.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-shura">最高修羅場</a>
                 </li>
@@ -57,7 +67,6 @@
                 <li><a href="#portfolio">法普分享</a></li>
                 <li><a href="#contact">聯絡方式</a></li>
             </ul>
-            <!-- ▲▲▲ 修改處 ▲▲▲ -->
             
             <div class="burger">
                 <div class="line1"></div>
