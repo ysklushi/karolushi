@@ -9,16 +9,22 @@
     
     <!-- ▼▼▼ 修改後的 CSS 樣式 (方案一) ▼▼▼ -->
     <style>
-        /* 為三個特殊按鈕設定不同的背景顏色 */
+        /* 為四個特殊按鈕設定不同的背景顏色 */
+        .cta-nav-button.cta-dashboard {
+            background-color: #bbdefb; /* 淡藍色 */
+        }
+        /* ▼▼▼ 新增：心智圖倉庫按鈕顏色 ▼▼▼ */
+        .cta-nav-button.cta-mindmap {
+            background-color: #ffcdd2; /* 淡粉色 */
+        }
+        /* ▲▲▲ 新增：心智圖倉庫按鈕顏色 ▲▲▲ */
         .cta-nav-button.cta-shura {
             background-color: #ffddc1; /* 淡橘色 */
         }
         .cta-nav-button.cta-test {
             background-color: #c8e6c9; /* 淡綠色 */
         }
-        .cta-nav-button.cta-dashboard {
-            background-color: #bbdefb; /* 淡藍色 */
-        }
+
 
         /* 針對所有按鈕設定一個平滑的過渡效果 */
         .cta-nav-button {
@@ -33,15 +39,21 @@
         }
 
         /* 讓每個按鈕懸停時的背景色加深 */
+        .cta-nav-button.cta-dashboard:hover {
+            background-color: #90caf9;
+        }
+        /* ▼▼▼ 新增：心智圖倉庫按鈕 hover 顏色 ▼▼▼ */
+        .cta-nav-button.cta-mindmap:hover {
+            background-color: #ef9a9a;
+        }
+        /* ▲▲▲ 新增：心智圖倉庫按鈕 hover 顏色 ▲▲▲ */
         .cta-nav-button.cta-shura:hover {
             background-color: #ffcba4;
         }
         .cta-nav-button.cta-test:hover {
             background-color: #a5d6a7;
         }
-        .cta-nav-button.cta-dashboard:hover {
-            background-color: #90caf9;
-        }
+
 
         /* ▼▼▼ 新增：聯絡方式對齊樣式 ▼▼▼ */
         .contact-info-block {
@@ -76,21 +88,28 @@
         <nav>
             <div class="logo">楊時綱律師</div>
 
+            <!-- ▼▼▼ 修改後的導覽列按鈕順序 ▼▼▼ -->
             <ul class="nav-links">
+                <li>
+                    <a href="https://karoboard.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-dashboard">過勞儀表板</a>
+                </li>
+                <!-- ▼▼▼ 新增：心智圖倉庫按鈕 ▼▼▼ -->
+                <li>
+                    <a href="https://mindmapzone.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-mindmap">心智圖倉庫</a>
+                </li>
+                <!-- ▲▲▲ 新增：心智圖倉庫按鈕 ▲▲▲ -->
                 <li>
                     <a href="https://shuratrial.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-shura">最高修羅場</a>
                 </li>
                 <li>
                     <a href="https://testforever.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-test">勞基法試煉</a>
                 </li>
-                <li>
-                    <a href="https://karoboard.netlify.app" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-dashboard">過勞儀表板</a>
-                </li>
                 <li><a href="#about">關於我</a></li>
                 <li><a href="#skills">提供服務</a></li>
                 <li><a href="#portfolio">法普分享</a></li>
                 <li><a href="#contact">聯絡方式</a></li>
             </ul>
+            <!-- ▲▲▲ 修改後的導覽列按鈕順序 ▲▲▲ -->
             
             <div class="burger">
                 <div class="line1"></div>
