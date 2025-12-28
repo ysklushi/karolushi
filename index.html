@@ -1,5 +1,3 @@
-<!-- --- START OF FILE index.html --- -->
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
@@ -135,6 +133,7 @@
         /* 按鈕顏色設定 */
         .cta-nav-button.cta-dashboard { background-color: #bbdefb; }
         .cta-nav-button.cta-journal { background-color: #e1bee7; } 
+        .cta-nav-button.cta-toolbox { background-color: #fff9c4; } /* 法律工具箱：粉黃色 */
         .cta-nav-button.cta-mindmap { background-color: #ffcdd2; }
         .cta-nav-button.cta-shura { background-color: #ffddc1; }
         .cta-nav-button.cta-test { background-color: #c8e6c9; }
@@ -147,6 +146,7 @@
         }
         .cta-nav-button.cta-dashboard:hover { background-color: #90caf9; }
         .cta-nav-button.cta-journal:hover { background-color: #ce93d8; }
+        .cta-nav-button.cta-toolbox:hover { background-color: #fff176; }
         .cta-nav-button.cta-mindmap:hover { background-color: #ef9a9a; }
         .cta-nav-button.cta-shura:hover { background-color: #ffcba4; }
         .cta-nav-button.cta-test:hover { background-color: #a5d6a7; }
@@ -199,7 +199,7 @@
                 transition: transform 0.5s ease-in;
                 box-shadow: -2px 0 5px rgba(0,0,0,0.1);
                 padding-top: 50px;
-                gap: 30px; 
+                gap: 20px; 
                 z-index: 999; 
             }
 
@@ -273,6 +273,9 @@
                             <a href="https://ysklushi.github.io/karolushiblog/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-journal">過勞札記</a>
                         </li>
                         <li>
+                            <a href="https://karoshibox.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-toolbox">法律工具箱</a>
+                        </li>
+                        <li>
                             <a href="https://mindmapzone.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-mindmap">心智圖倉庫</a>
                         </li>
                         <li>
@@ -290,7 +293,8 @@
             <ul class="nav-links">
                 <!-- 彩色按鈕區 (手機版) -->
                 <li><a href="https://karoboard.netlify.app" class="cta-nav-button cta-dashboard">過勞儀表板</a></li>
-                <li><a href="#" class="cta-nav-button cta-journal">過勞札記</a></li>
+                <li><a href="https://ysklushi.github.io/karolushiblog/" class="cta-nav-button cta-journal">過勞札記</a></li>
+                <li><a href="https://karoshibox.netlify.app/" target="_blank" rel="noopener noreferrer" class="cta-nav-button cta-toolbox">法律工具箱</a></li>
                 <li><a href="https://mindmapzone.netlify.app/" class="cta-nav-button cta-mindmap">心智圖倉庫</a></li>
                 <li><a href="https://shuratrial.netlify.app/" class="cta-nav-button cta-shura">最高修羅場</a></li>
                 <li><a href="https://testforever.netlify.app/" class="cta-nav-button cta-test">勞基法試煉</a></li>
